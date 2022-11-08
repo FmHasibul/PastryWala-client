@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     const menuItems =
         <>
-            < li > <Link>Home</Link></li>
+            < li > <Link to='/home'>Home</Link></li>
             <li><Link>Services</Link></li>
             <li><Link>About</Link></li>
-            <li><Link>Blog</Link></li>
+            <li><Link to='/blog'>Blog</Link></li>
 
         </>
 
