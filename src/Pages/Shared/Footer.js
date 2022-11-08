@@ -19,12 +19,12 @@ const Footer = () => {
             </div>
             <div>
                 <span className="footer-title">Newsletter</span>
-                <div className="form-control w-80">
+                <div className="form-control w-50">
                     <label className="label">
                         <span className="label-text">Enter your email address</span>
                     </label>
                     <div className="relative">
-                        <input type="text" placeholder="Your Email address here" className="input input-bordered w-full pr-16" />
+                        <input type="text" placeholder="Your Email " className="input input-bordered w-full" />
                         <button className="btn btn-secoundary absolute top-0 right-0 rounded-l-none">Subscribe</button>
                     </div>
                 </div>

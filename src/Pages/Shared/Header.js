@@ -16,6 +16,7 @@ const Header = () => {
 
 
     return (
+
         <div className="navbar bg-base-200">
             <div className="navbar-start">
                 <div className="dropdown">
@@ -36,14 +37,15 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user ?
-                        <ul className="menu menu-horizontal p-0">
+                        <ul className="menu lg:menu-horizontal ">
                             <li> <Link className=" bg-slate-200 glass ">Logout</Link></li>
                             <li><Link>My Review</Link></li>
                             <li><Link>Add Items</Link></li>
                         </ul>
                         :
-                        <><ul tabIndex={0} className=" glass  my-1 p-2 shadow bg-base-100 rounded-box">
+                        <><ul className=" menu lg:menu-horizontal  bg-base-100 rounded-box">
                             <li><Link className="font-semibold text-green-400 ">Login</Link></li>
+                            <li><Link to='/register' className="font-semibold text-green-400 ">Register</Link></li>
                         </ul>
 
 
