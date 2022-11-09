@@ -40,18 +40,18 @@ const SignUp = () => {
 
                 <div className="card-body ">
                     <Link to='/mailregister' className="form-control">
-                        <button className="btn input text-gray-600 input-bordered gap-2">
+                        <button className="btn input glass text-gray-600 input-bordered gap-2">
                             Login with Your Email
                         </button>
                     </Link>
                     <div className="form-control">
-                        <button onClick={handleGoogle} className="btn input text-gray-600 input-bordered gap-2">
+                        <button onClick={handleGoogle} className="btn input glass text-gray-600 input-bordered gap-2">
                             <FaGoogle />
                             Login with Google
                         </button>
                     </div>
                     <div className="form-control">
-                        <button onClick={handlegitHubLogin} className="btn input text-gray-600 input-bordered gap-2">
+                        <button onClick={handlegitHubLogin} className="btn glass input text-gray-600 input-bordered gap-2">
                             <FaGithub />
                             Login with GitHub
                         </button>
