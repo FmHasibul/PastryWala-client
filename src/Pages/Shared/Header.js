@@ -8,8 +8,8 @@ const Header = () => {
     const menuItems =
         <>
             < li > <Link to='/home'>Home</Link></li>
-            <li><Link>Services</Link></li>
-            <li><Link>About</Link></li>
+            <li><Link to='/services'>Services</Link></li>
+            <li><Link to='/about'>About</Link></li>
             <li><Link to='/blog'>Blog</Link></li>
 
         </>
@@ -39,12 +39,12 @@ const Header = () => {
                     user ?
                         <ul className="menu lg:menu-horizontal ">
                             <li> <Link className=" bg-slate-400 glass ">Logout</Link></li>
-                            <li><Link>My Review</Link></li>
-                            <li><Link>Add Items</Link></li>
+                            <li><Link to='/review'>My Review</Link></li>
+                            <li><Link to='/addservice'>Add Items</Link></li>
                         </ul>
                         :
                         <><ul className=" menu lg:menu-horizontal glass  rounded-box">
-                            <li><Link className="font-semibold text-green-400 ">Login</Link></li>
+                            <li><Link to='/login' className="font-semibold text-green-400 ">Login</Link></li>
                             <li><Link to='/register' className="font-semibold text-green-400 ">Register</Link></li>
                         </ul>
 

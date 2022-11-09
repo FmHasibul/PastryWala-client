@@ -69,7 +69,7 @@ const Register = () => {
 
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content relative flex-col lg:flex-row-reverse">
-                <img src={svg} className="w-1/2 relative right-5/1 rounded-lg shadow-2xl" />
+                <img src={svg} alt="bg-img" className="w-1/2 relative right-5/1 rounded-lg shadow-2xl" />
                 <div>
                     <div className='mb-16   mx-auto rounded'>
                         <div className="hero min-h-screen bg-base-200">
