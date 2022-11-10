@@ -8,8 +8,11 @@ import Home from "../Pages/Home/Home"
 import MyReview from "../Pages/MyReview/MyReview"
 import Login from "../Pages/Register/Login/Login"
 import SignUp from "../Pages/Register/SignUp/SignUp"
+import Register from "../Pages/Register/Register"
 import ServicesSection from "../Pages/ServicesSection/ServicesSection"
 import NotFound from "./NotFound/NotFound"
+import ServiceDetails from "../Pages/Home/Services/ServicesDetails/ServiceDetails"
+import Reviews from "../Pages/Home/Services/Reviews/Reviews"
 
 const routes = createBrowserRouter([
 
@@ -34,8 +37,20 @@ const routes = createBrowserRouter([
                 element: <ServicesSection />
             },
             {
+                path: '/service/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id
+                    }`),
+                element: <ServiceDetails />
+            },
+            {
                 path: '/review',
                 element: <MyReview />
+            },
+            {
+                path: '/addReview/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id
+                    }`),
+                element: <Reviews />
             },
             {
                 path: '/addservice',
@@ -44,6 +59,10 @@ const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <SignUp />
+            },
+            {
+                path: '/mailregister',
+                element: <Register />
             },
             {
                 path: '/login',

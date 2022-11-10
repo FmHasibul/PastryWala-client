@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom'
+
 const Services = ({ service }) => {
-    const { name, picture, price, details } = service;
-    console.log(name);
+    const { _id, name, picture, price, details } = service;
     return (
         <div>
             <div className="card h-96 glass">
@@ -13,7 +14,7 @@ const Services = ({ service }) => {
                 </div>
                 <div className="card-actions m-1 p-5 flex items-center justify-between">
                     <p>Price : <span className='text-rose-600-500'>${price}</span></p>
-                    <button className="rounded-xl bg-orange-400 btn-sm glass ">Details!</button>
+                    <Link to={`/service/${_id}`}><button className="btn glass btn-wide m-0 ">Show Details</button></Link>
                 </div>
             </div>
 

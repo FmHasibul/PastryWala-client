@@ -22,15 +22,18 @@ const Home = () => {
                         <p>Courses designed by experts with real-world practice.</p>
                         <p>Join our global community. <span className="font-bold">It's free.</span></p>
                     </div>
-                    <Link to='/courses'><button className="btn btn-wide bg-orange-400 rounded-md hover:bg-green-700">Go to Services</button></Link>
+                    <Link to='/services'><button className="btn btn-wide bg-orange-400 rounded-md hover:bg-green-700">Go to Services</button></Link>
                 </div>
             </div>
             <div className=' container mx-auto grid grid-cols-3 gap-2 my-10'>
                 {
-                    services.map(service => <Services key={service._id} service={service}></Services>)
+                    services.slice(0, 3).map(service => <Services key={service._id} service={service}></Services>)
                 }
 
             </div>
+
+            <Link className='' to='/services'><button className="btn text-center btn-wide bg-orange-400 rounded-md hover:bg-green-700">All Services</button></Link>
+
             <div className="pb-24 bg-gray-300">
                 <div className="container mx-auto pt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
