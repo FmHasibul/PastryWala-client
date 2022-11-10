@@ -18,7 +18,7 @@ const Reviews = () => {
         // console.log(review);
         const update = { ...service, review }
         // console.log(update);
-        fetch(`http://localhost:5000/foods/${id}`, {
+        fetch(`https://aseleven-server.vercel.app/foods/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(update)

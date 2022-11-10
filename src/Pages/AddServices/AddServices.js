@@ -5,7 +5,7 @@ const AddServices = () => {
     const handlePost = (e) => {
         e.preventDefault()
         // console.log(foodItems);
-        fetch('http://localhost:5000/foods', {
+        fetch('https://aseleven-server.vercel.app/foods', {
             method: "POST",
             headers: { "content-type": 'application/json' },
             body: JSON.stringify(foodItems)

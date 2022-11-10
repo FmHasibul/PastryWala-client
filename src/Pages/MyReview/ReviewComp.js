@@ -6,7 +6,7 @@ const ReviewComp = ({ reviewData }) => {
     console.log(reviewData);
     return (
         <div>
-            <div className='grid border my-2 grid-cols-1 lg:grid-cols-3'>
+            <div className='grid border my-2 rounded-lg glass grid-cols-1 lg:grid-cols-3'>
                 <div className=" flex-col mx-auto">
                     <img src={img} className="w-40 my-2" alt="" />
                     <p className='text-lg'>User Name:{review ? review.userName : 'No user Name'} </p>
@@ -21,7 +21,7 @@ const ReviewComp = ({ reviewData }) => {
                                 <p><span>Your Review: </span>{review?.reviews}</p>
                             </>
                             :
-                            <h4 className='text-center flex items-center'>No reviews Yet for: <br /> <span className='text-orange-700 text-lg'> {name}</span></h4>
+                            <h4 className='text-center flex items-center'>No reviews Yet for: <span className='text-orange-700 text-lg'> {name}</span></h4>
                     }
                 </div>
 

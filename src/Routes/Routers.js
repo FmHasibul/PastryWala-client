@@ -13,6 +13,7 @@ import ServicesSection from "../Pages/ServicesSection/ServicesSection"
 import NotFound from "./NotFound/NotFound"
 import ServiceDetails from "../Pages/Home/Services/ServicesDetails/ServiceDetails"
 import Reviews from "../Pages/Home/Services/Reviews/Reviews"
+import PrivateRoutes from "./PrivateRoutes/PrivateRoutes"
 
 const routes = createBrowserRouter([
 
@@ -38,24 +39,24 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/service/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id
+                loader: ({ params }) => fetch(`https://aseleven-server.vercel.app/foods/${params.id
                     }`),
                 element: <ServiceDetails />
             },
             {
                 path: '/review',
-                loader: () => fetch('http://localhost:5000/foods'),
-                element: <MyReview />
+                loader: () => fetch('https://aseleven-server.vercel.app/foods'),
+                element: <PrivateRoutes><MyReview /></PrivateRoutes>
             },
             {
                 path: '/addReview/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id
+                loader: ({ params }) => fetch(`https://aseleven-server.vercel.app/foods/${params.id
                     }`),
                 element: <Reviews />
             },
             {
                 path: '/addservice',
-                element: <AddServices />
+                element: <PrivateRoutes><AddServices /></PrivateRoutes>
             },
             {
                 path: '/register',

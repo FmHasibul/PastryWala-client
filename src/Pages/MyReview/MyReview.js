@@ -5,8 +5,9 @@ import ReviewComp from './ReviewComp';
 
 const MyReview = () => {
     const services = useLoaderData();
+
     return (
-        <div className='container my-7 mx-auto'>
+        <div className='container my-7 rounded-lg mx-auto'>
             {
                 services.map(serviceReview => <ReviewComp key={serviceReview._id} reviewData={serviceReview} />)
             }

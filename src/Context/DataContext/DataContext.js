@@ -9,7 +9,7 @@ const DataContext = ({ children }) => {
 
     useEffect(() => {
         // fetch('https://aseleven-server.vercel.app/foods')
-        fetch('http://localhost:5000/foods')
+        fetch('https://aseleven-server.vercel.app/foods')
             .then(res => res.json())
             .then(data => setServices(data))
 
