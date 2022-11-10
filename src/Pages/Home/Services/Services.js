@@ -1,8 +1,10 @@
 import React from 'react';
 
+import useTitle from '../../../Hooks/useTitle'
 import { Link } from 'react-router-dom'
 
 const Services = ({ service }) => {
+    useTitle('Services')
     const { _id, name, picture, price, details } = service;
     return (
         <div>
