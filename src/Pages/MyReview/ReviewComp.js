@@ -1,7 +1,7 @@
 import React from 'react';
 import img from './businessman-309.svg'
 
-const ReviewComp = ({ review: reviewData }) => {
+const ReviewComp = ({ reviewData }) => {
     const { review, name, } = reviewData
     console.log(reviewData);
     return (
@@ -12,9 +12,17 @@ const ReviewComp = ({ review: reviewData }) => {
                     <p className='text-lg'>User Name:{review ? review.userName : 'No user Name'} </p>
 
                 </div>
-                <div className="grid borser col-span-2">
-                    <h3 className='text-3xl'>Here is Review for <span className='text-orange-700'>{name}</span></h3>
-                    <p><span>Your Review: </span>{review?.reviews}</p>
+                <div className="grid text-left col-span-2">
+                    {
+                        review ?
+                            <>
+                                <h3 className='text-3xl text-center'>Here is Review for <span className='text-orange-700'>{name}</span></h3>
+                                <p><span>Your Retings: </span>{review?.ratings}</p>
+                                <p><span>Your Review: </span>{review?.reviews}</p>
+                            </>
+                            :
+                            <h4 className='text-center flex items-center'>No reviews Yet for: <br /> <span className='text-orange-700 text-lg'> {name}</span></h4>
+                    }
                 </div>
 
             </div>
