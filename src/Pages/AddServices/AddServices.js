@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import useTitle from '../../Hooks/useTitle';
 
 const AddServices = () => {
+    useTitle('Add Services')
     const [foodItems, setFoodItems] = useState({})
     const handlePost = (e) => {
         e.preventDefault()

@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { ServicesContext } from '../../Context/DataContext/DataContext';
+import useTitle from '../../Hooks/useTitle';
 import Services from '../Home/Services/Services';
 
 const ServicesSection = () => {
+    useTitle('Services')
 
     const { services } = useContext(ServicesContext)
     return (

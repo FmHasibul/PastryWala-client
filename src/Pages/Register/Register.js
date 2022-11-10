@@ -3,9 +3,10 @@ import { AuthContext } from '../../Context/AuthContext/AuthProvider';
 import { FaDragon } from 'react-icons/fa';
 import svg from './undraw_access_account_re_8spm.svg'
 import { Link } from 'react-router-dom';
+import useTitle from '../../Hooks/useTitle';
 
 const Register = () => {
-
+    useTitle('Register')
     const { createUser, userProfileInfo } = useContext(AuthContext)
 
     const [userData, setUserData] = useState({ email: "", password: "" })
