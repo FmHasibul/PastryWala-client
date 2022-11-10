@@ -9,9 +9,8 @@ const Reviews = () => {
 
     const { id } = useParams()
     const service = useLoaderData()
-    const [ser, setSer] = useState(service)
 
-    console.log(ser);
+
 
 
     const handlePost = (e) => {
