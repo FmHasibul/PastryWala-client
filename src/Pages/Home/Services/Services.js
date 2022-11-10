@@ -1,15 +1,21 @@
 import React from 'react';
-
 import useTitle from '../../../Hooks/useTitle'
 import { Link } from 'react-router-dom'
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const Services = ({ service }) => {
     useTitle('Services')
     const { _id, name, picture, price, details } = service;
     return (
         <div>
+
             <div className="card h-96 glass">
-                <figure><img src={picture} className="" alt="car!" /></figure>
+                <PhotoProvider>
+                    <PhotoView src={picture}>
+                        <figure><img src={picture} className="" alt="car!" /></figure>
+                    </PhotoView>
+                </PhotoProvider>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p>{details.slice(0, 100) + "...."}</p>
