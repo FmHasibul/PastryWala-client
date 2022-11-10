@@ -10,18 +10,18 @@ const ServiceDetails = () => {
 
     const { _id, name, picture, price, ratings, details } = detail
     return (
-        <div className='container mx-auto mb-16'>
-            <div className="card card-compact  bg-base-100 shadow-xl">
+        <div className='container mx-auto mt-10 rounded-3xl glass mb-16'>
+            <div className="card card-compact   shadow-xl">
                 <h2 className='py-10 text-4xl font-serif text-emerald-100'>This is service details </h2>
                 <PhotoProvider>
                     <PhotoView src={picture}>
-                        <figure><img src={picture} className="" alt="food" /></figure>
+                        <figure><img src={picture} className="w-96 py-5" alt="food" /></figure>
                     </PhotoView>
                 </PhotoProvider>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p>{details}</p>
-                    <div>
+                    <div className='flex text-green-800 py-5'>
                         <p>Price $:  {price}</p>
                         <p>Ratings: {ratings}</p>
                     </div>
